@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Manager</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>API List of Events</h1>
+    <div id="event-container"></div>
+
+    <h2>Upcoming Events</h2>
+    <div id="card-container"></div>
+
+    <script src="index.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", fetchAllEvents);
+    </script>
+
+    <form id="event-form">
+        <fieldset>
+            <legend>Got an awesome party idea? Fill out the form below to make it happen!</legend>
+            
+            <label for="eventId">Event ID:
+            <input type="number" id="eventId" name="eventId" min= "0" required>
+            </label>
+
+            <label for="name">Event Name:
+            <input type="text" id="nameInput" name="nameInput" required>
+            </label>
+
+            <label for="date">Event Date:
+            <input type="date" id="dateInput" name="dateInput" required>
+            </label>
+
+            <label for="description">Event Description:
+            <input type="text" id="descriptionInput" name="descriptionInput" size="50" required>
+            </label>
+
+            <label for="venue-name">Name of Venue:
+            <input type="text" id="venue-name" name="venue-name" required>
+            </label>
+
+            <label for="venue-address">Venue Address:
+            <input type="text" id="venue-address" name="venue-address" size="70" required>
+            </label>
+
+            <button type="submit" id="submit-btn">Add Event</button>
+        </fieldset>
+    </form>
+</body>
+</html>
